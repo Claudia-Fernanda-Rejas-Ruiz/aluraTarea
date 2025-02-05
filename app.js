@@ -22,3 +22,14 @@ function agregarAmigo() {
 
     actualizarLista(); // Actualizar la lista visualmente
 }
+
+function actualizarLista() {
+    const lista = document.getElementById("listaAmigos");
+    lista.innerHTML = ""; // Limpiar la lista antes de actualizar
+
+    for (let amigo of arrayAmigos) {
+        const li = document.createElement("li");
+        li.textContent = amigo;
+        lista.appendChild(li);
+    }
+}
